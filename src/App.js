@@ -1,27 +1,29 @@
 import React from 'react';
+import {Routes, Route} from 'react-router-dom'
+
 import Navbar from './components/Navbar'
 
-import Todofunc from './components/Todofunc'
-
-// import handler from './components/Todofunc'
+import Todofunc from './views/Todofunc'
 
 
 function App() {
 
-  // let form = document.getElementById('todoform');
-  // form.addEventListener('submit', handler);
-
 
   return (
     <div className="App">
-      <Navbar />
 
-      {/* <div className = 'form'>
-        <Todoform/>
-      </div> */}
+    <Navbar />
 
-      <Todofunc />
+    <div className='container'>
 
+      <Routes>
+        <Route path='/' element ={<Todofunc />}/>
+        <Route path='/pokestats' />
+
+
+      </Routes>
+
+      </div>
 
 
     </div>
